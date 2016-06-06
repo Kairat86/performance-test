@@ -73,13 +73,13 @@ public class Runner implements Comparable<Runner> {
         System.out.println("Map.remove operation check: HashMap vs. TreeMap");
         System.out.println("Time consumed to remove all 110000 objects: ");
         System.out.println("HashMap: " + testMapRemovePerformance(hMap));
-        System.out.println("TreeMap:" +testMapRemovePerformance(tMap));
+        System.out.println("TreeMap:" + testMapRemovePerformance(tMap));
 
     }
 
     private static long testMapRemovePerformance(Map<Integer, Object> map) {
         long t1 = System.currentTimeMillis();
-        for (int i=0;i<ITERATION_NUM;i++) {
+        for (int i = 0; i < ITERATION_NUM; i++) {
             map.remove(i);
         }
         long t2 = System.currentTimeMillis();
@@ -142,9 +142,7 @@ public class Runner implements Comparable<Runner> {
     private static long testRemovePerformance(Collection<Object> collection) {
 
         long t1 = System.currentTimeMillis();
-        while (collection.iterator().hasNext()) {
-            collection.remove(collection.iterator().next());
-        }
+        collection.removeAll(collection);
         long t2 = System.currentTimeMillis();
         return t2 - t1;
     }
