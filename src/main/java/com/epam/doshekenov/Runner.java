@@ -17,17 +17,17 @@ public class Runner implements Comparable<Runner> {
         List<Object> lList = new LinkedList<>();
 
 
-        System.out.println("List.add() operation check: ArrayList vs. LinkedList");
+        System.out.println("List.add() operation test: ArrayList vs. LinkedList");
         System.out.println("Time consumed for adding 110000 objects: ");
         System.out.println("ArrayList:" + testAddPerformance(aList, null));
         System.out.println("LinkedList:" + testAddPerformance(lList, null));
         System.out.println("---------------------------------------------------");
-        System.out.println("List.remove() operation check: ArrayList vs. LinkedList");
+        System.out.println("List.remove() operation test: ArrayList vs. LinkedList");
         System.out.println("Time consumed for removing 110000 objects: ");
         System.out.println("ArrayList:" + testRemovePerformance(aList));
         System.out.println("LinkedList:" + testRemovePerformance(lList));
         System.out.println("----------------------------------------------------");
-        System.out.println("List.contains() operation check:ArrayList vs. LinkedList");
+        System.out.println("List.contains() operation test:ArrayList vs. LinkedList");
         System.out.println("Time consumed to find an Object with id=12354 among 110000 objects: ");
         System.out.println("ArrayList:" + testSearchPerformance(new ArrayList<>(), 12354));
         System.out.println("LinkedList:" + testSearchPerformance(new LinkedList<>(), 12354));
@@ -38,7 +38,7 @@ public class Runner implements Comparable<Runner> {
 
         Set hashSet = new HashSet<>();
         Set treeSet = new TreeSet<>();
-        System.out.println("Set.add() operation check: HashSet vs. TreeSet");
+        System.out.println("Set.add() operation test: HashSet vs. TreeSet");
         System.out.println("Time consumed for adding 110000 objects: ");
         Runner[] array = new Runner[ITERATION_NUM];
         for (int i = 0; i < ITERATION_NUM; i++) {
@@ -46,31 +46,31 @@ public class Runner implements Comparable<Runner> {
         }
         System.out.println("HashSet:" + testAddPerformance(hashSet, array));
         System.out.println("TreeSet:" + testAddPerformance(treeSet, array));
-        System.out.println("Set.contains() operation check:HashSet vs. TreeSet");
+        System.out.println("Set.contains() operation test:HashSet vs. TreeSet");
         System.out.println("Time consumed to find an Object with id=12354 among 110000 objects: ");
         System.out.println("HashSet:" + testSearchPerformance(new HashSet<>(), 12354));
         System.out.println("TreeSet:" + testSearchPerformance(new TreeSet<>(), 12354));
         System.out.println("Time consumed to find an Object with id=100000 among 110000 objects: ");
         System.out.println("HashSet:" + testSearchPerformance(new HashSet<>(), 100000));
         System.out.println("TreeSet:" + testSearchPerformance(new TreeSet<>(), 100000));
-        System.out.println("Set.remove() operation check:HashSet vs. TreeSet");
+        System.out.println("Set.remove() operation test:HashSet vs. TreeSet");
         System.out.println("Time consumed to remove 110000 objects: ");
         System.out.println("HashSet:" + testRemovePerformance(hashSet));
         System.out.println("TreeSet:" + testRemovePerformance(treeSet));
         System.out.println("##########################################################");
-        System.out.println("Map.put operation check: HashMap vs. TreeMap");
+        System.out.println("Map.put operation test: HashMap vs. TreeMap");
         System.out.println("Time consumed for putting 110000 objects: ");
         Map<Integer, Object> hMap = new HashMap<>();
         Map<Integer, Object> tMap = new TreeMap<>();
         System.out.println("HashMap:" + testMapPutPerformance(hMap));
         System.out.println("TreeMap:" + testMapPutPerformance(tMap));
         System.out.println("---------------------------------------------------------------");
-        System.out.println("Map.containsValue()  operation check HashMap vs. TreeMap");
+        System.out.println("Map.containsValue()  operation test HashMap vs. TreeMap");
         System.out.println("Time consumed to find a Runner object with id=66666 among 110000 objects: ");
         System.out.println("HashMap: " + testContainsValuePerformance(new HashMap<>(), 66666));
         System.out.println("TreeMap: " + testContainsValuePerformance(new TreeMap<>(), 66666));
         System.out.println("----------------------------------------------------------------");
-        System.out.println("Map.remove operation check: HashMap vs. TreeMap");
+        System.out.println("Map.remove operation test: HashMap vs. TreeMap");
         System.out.println("Time consumed to remove all 110000 objects: ");
         System.out.println("HashMap: " + testMapRemovePerformance(hMap));
         System.out.println("TreeMap:" + testMapRemovePerformance(tMap));
