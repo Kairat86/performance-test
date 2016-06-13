@@ -41,16 +41,6 @@ public class CollectionTest {
         return delta;
     }
 
-
-    private static Runner[] prepareArray(int iterationNum) {
-        Runner[] runners = new Runner[iterationNum];
-        for (int i = 0; i < iterationNum; i++) {
-            runners[i] = new Runner(i);
-        }
-        return runners;
-    }
-
-
     public static long testRemovePerformance(Collection<Runner> collection) {
         System.out.println("Time consumed for " + collection.getClass().getSimpleName() + " to remove " + collection.size() + " objects (ms)");
         long t1 = System.currentTimeMillis();
